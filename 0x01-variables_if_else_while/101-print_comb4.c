@@ -8,7 +8,7 @@
  * if - condition to check for something
  *
  *
- * return: Always 0(Success)
+ * Return: Always 0(Success)
  */
 
 int main(void)
@@ -26,9 +26,11 @@ int main(void)
 					putchar(i + '0');
 					putchar(j + '0');
 					putchar(k + '0');
-					if ((i != 8 && k != 9) || (i == 8 && j != 9) || (i != 7))
+					if ((i != 7) || (i == 7 && j == 8 && k != 9))
+					{
 						putchar(',');
-					putchar(' ');
+						putchar(' ');
+					}
 				}
 			}
 		}
