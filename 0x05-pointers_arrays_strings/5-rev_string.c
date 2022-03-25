@@ -15,19 +15,15 @@ int i, len;
 int j = 0;
 len = strlen(s);
 
-while (j <= len - 1)
-{
-_putchar(s[j]);
-j++;
-}
-
-_putchar('\n');
-
 for (i = len - 1; i >= 0; i--)
 {
-
+	while (j <= len -1)
+	{
+		_putchar(s[j]);
+		j++;
+	}
+	_putchar('\n');
 	_putchar(s[i]);
 
 }
-_putchar('\n');
 }
