@@ -1,5 +1,4 @@
 #include "main.h"
-#include<string.h>
 /**
  * rev_string - entry for main code block
  * @s: string to be checked
@@ -9,21 +8,31 @@
  * _putchar - used to print charatcers
  *
  */
+
 void rev_string(char *s)
 {
-int i, len;
-int j = 0;
-len = strlen(s);
+	int length, j, i;
 
-for (i = len - 1; i >= 0; i--)
-{
-	while (j <= len -1)
+	char v1, v2;
+
+	for (length = 0; s[length] != '\0'; length++)
 	{
-		_putchar(s[j]);
-		j++;
-	}
-	_putchar('\n');
-	_putchar(s[i]);
 
-}
+	}
+
+	j = length - 1;
+	i = 0;
+
+	while (j > i)
+	{
+		v1 = s[i];
+		v2 = s[j];
+		s[i] = v2;
+		s[j] = v1;
+
+		j--;
+
+		i++;
+	}
+
 }
