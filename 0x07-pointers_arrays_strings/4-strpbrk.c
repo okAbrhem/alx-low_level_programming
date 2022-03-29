@@ -1,30 +1,22 @@
 #include "main.h"
-
-#include<string.h>
-
 /**
- * *_strpbrk - returns first occurrence of a matching character
+ * *_strpbrk - finds first occurrence of a matching character
  * @s: string to be scanned
  * @accept: string to be matched
  *
- * Return: matching string @s,NULL otherwise
+ * Return: matching string
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j, len1, len2;
+	int i, j;
 
-	len1 = strlen(s);
-
-	len2 = strlen(accept);
-
-	for (i = 0; i <= len1; i++)
+	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; j <= len2; j++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (*(s + i) == *(accept + j) && (*accept + j) != '\0')
+			if (s[i] == accept[j])
 			{
-				return (*(s + i));
+				return (s[i]);
 			}
 		}
 	}
