@@ -1,24 +1,31 @@
 #include "main.h"
+#include <string.h>
 /**
- * *_strpbrk - finds first occurrence of a matching character
- * @s: string to be scanned
- * @accept: string to be matched
+ * *_strpbrk - search a string for any of a set of bytes
+ * @s: main string
+ * @accept: characters to be checked
  *
- * Return: matching string
+ * Return: matching string 
  */
+
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j;
+	int i = 0, j;
 
-	for (i = 0; s[i]; i++)
+	while (s[a])
 	{
-		for (j = 0; accept[j]; j++)
+		b = 0;
+		
+		while (accept[j])
 		{
 			if (s[i] == accept[j])
 			{
-				return (s[i]);
+				s += i;
+				return (s);
 			}
+			j++;
 		}
+		i++;
 	}
 	return ('\0');
 }
