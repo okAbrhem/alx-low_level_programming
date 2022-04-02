@@ -1,13 +1,13 @@
 #include "main.h"
-
 /**
- * main - entry point
+ * _strcat - concatenate two strings
+ * @dest: string to be concatenated
+ * @rsc: string to concatenate
  *
- * return: 0 Success
+ * Return: pointer to @dest
  */
 
-
-int main(void)
+char *_strcat(char *dest, char *src)
 {
-	return (0);
+	return (dest);
 }
