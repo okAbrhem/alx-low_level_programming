@@ -1,5 +1,6 @@
 #include "main.h"
 #include<stdio.h>
+#include<ctype.h>
 #include<stdlib.h>
 
 /**
@@ -25,14 +26,16 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (!atoi(argv[i]) || (atoi(argv[i]) < 0))
+			int k = atoi(argv[i]);
+
+			if (k != atoi(argv[i]))
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
 			else
 			{
-				sum += atoi(argv[i]);
+				sum += k;
 			}
 		}
 	}
