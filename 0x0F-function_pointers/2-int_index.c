@@ -1,7 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
  * int_index - returns index of the first element
  * @array: array to be checked
@@ -36,3 +33,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	return (-1);
 }
+
+
+
+
+
+
